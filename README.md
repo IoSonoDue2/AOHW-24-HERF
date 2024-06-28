@@ -34,6 +34,7 @@ The repository contains the following main directories and files:
     └─`host/`               #Host code and all necessary files for testing.
     └─`hw/`                 #Hardware build files.
     └─`source/`             #Source code implementing the CKKS encryption scheme.
+    └─`ready_to_run/`             #Source code implementing the CKKS encryption scheme.
   
 ├─`VCK5000` : Supports the development and deployment of the CKKS scheme on the Versal VCK5000 platform. It includes:
     └─`Makefile`            #Automates the build process for compiling source code and generating binaries and hardware configuration files.
