@@ -62,8 +62,8 @@ The repository contains the following main directories and files:
 6. Open the host you want to test `<...>_host.ipynb` and run it.
 
 #### For Versal VCK5000:
-
-3. Move the `hw_build/` folder on the host machine connected to board, enter the folder, and run the host application with:
+3. Navigate to the `VCK5000/` directory.
+4. Move the `hw_build/` folder on the host machine connected to a VersalVCK5000 eith qdma2022.2 platform, enter the folder, and run the host application with:
   ```sh
   ./host_overlay.exe
   ```
