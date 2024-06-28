@@ -25,6 +25,13 @@ Politecnico di Milano
 ## Boards used:
 AMD Kria KV260, AMD-Xilinx Versal VCK5000
 
+<img src="https://hackster.imgix.net/uploads/attachments/1343310/_aZQq9gdBBd.blob?auto=compress%2Cformat&w=900&h=675&fit=min" height="260" align="bottom" /> <img src="https://www.xilinx.com/content/dam/xilinx/imgs/products/versal/vck5000/vck5000.png" height="260" align="bottom" />
+
+
+
+
+
+
 ## Software Version:
 Vitis HLS 2022.2, Vivado 2022.2
 
