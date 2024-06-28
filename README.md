@@ -1,4 +1,4 @@
-# AOHW-24-HERF
+# AOHW-24 Homomorphic Encryption Acceleration Through Reconfigurable Fabric
 
 ## Team number: AOHW-339
 
