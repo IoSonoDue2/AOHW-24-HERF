@@ -167,6 +167,5 @@ Move the `<build_name>/` folder on the host machine connected to board, enter th
   ```
 The host will let you select which kernel to run and test
 
-### Additional Steps (if applicable):
+### Additional Steps:
 - For further customization and testing, modify the source code in the `source` directories and rebuild the project.
-- Refer to the `README.md` files in each directory for more detailed instructions and information about additional features and configurations.
