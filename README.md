@@ -58,9 +58,13 @@ The repository contains the following main directories and files:
 
 #### For Kria KV260:
 3. Navigate to the `Kria_kv260/` directory.
-4. Move the folder `ready_to_run/` to your Kria in `/home/root/jupiter_notebooks/` (this path can vary according to your installation of pynq)
-5. Connect through Jupiter to the board and move in the `ready_to_run/` directory.
-6. Open the host you want to test `<...>_host.ipynb` and run it.
+4. Move the folder `ready_to_run/` to your Kria in `/home/root/jupyter_notebooks/` (this path can vary according to your installation of pynq)
+5. Connect through shell to the board, move in the `ready_to_run/` directory and execute:
+    ```sh
+    chmod +x data_gen
+    ```
+7. Connect through Jupyter to the board and move in the `ready_to_run/` directory.
+8. Open the host you want to test `<...>_host.ipynb` and run it.
 
 #### For Versal VCK5000:
 3. Navigate to the `VCK5000/` directory.
@@ -142,7 +146,7 @@ After building the project, program and run the FPGA with the generated files.
 
 #### For Kria KV260:
 1. Connect to your Kria KV260 with pynq installed.
-2. Create a folder `<folder_name>/` on the board in `/home/root/jupiter_notebooks/` (this path can vary according to your installation of pynq)
+2. Create a folder `<folder_name>/` on the board in `/home/root/jupyter_notebooks/` (this path can vary according to your installation of pynq)
 3. Move the files generated in the `<export.zip` and `data_gen` executable compiled on kria in this folder. In particular you need to obtain the following structure:
    ```
    ├─ <folder_name>/                
