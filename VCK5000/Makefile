@@ -1,5 +1,5 @@
 # MIT License
-# Copyright (c) 2023 Paolo Salvatore Galfano, Giuseppe Sorrentino
+# Copyright (c) 2024 Valentino Guerrini
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -18,7 +18,7 @@
 ECHO=@echo
 .PHONY: help
 TARGET := hw
-#PLATFORM := xilinx_vck5000_gen4x8_xdma_2_202210_1
+
 PLATFORM := xilinx_vck5000_gen4x8_qdma_2_202220_1
 help::
 	$(ECHO) "Makefile Usage:"
@@ -26,27 +26,37 @@ help::
 	$(ECHO) ""
 	$(ECHO) "  make build_sw"
 	$(ECHO) ""
+	$(ECHO) "  make testbench_all"
+	$(ECHO) "    Command to run the testbenches."
+	$(ECHO) ""
+	$(ECHO) "  make build_and_pack"
+	$(ECHO) "    Command to build the hardware and software and pack the files."
+	$(ECHO) ""
+	$(ECHO) "  make pack"
+	$(ECHO) "    Command to pack the files."
+	$(ECHO) ""
 	$(ECHO) "  make clean"
 	$(ECHO) ""
-# Build hareware (xclbin) objects
-build_hw: compile_data_movers hw_link
-compile_aie:
-	make -C ./aie aie_compile
-compile_data_movers:
-	make -C ./data_movers compile TARGET=$(TARGET) PLATFORM=$(PLATFORM)
+# Build hardware (xclbin) objects
+build_hw: compile_source hw_link
+
+compile_source:
+	make -C ./source compile TARGET=$(TARGET) PLATFORM=$(PLATFORM)
 hw_link:
 	make -C ./hw all TARGET=$(TARGET) PLATFORM=$(PLATFORM)
 # Build software object
 build_sw:
 	make -C ./sw all
 testbench_all:
-	make -C ./aie aie_compile_x86
-	make -C ./data_movers testbench_setupaie
-	make -C ./data_movers testbench_sink_from_aie
+	make -C ./source testbench_ckks
+
 NAME := hw_build
 pack:
-	cp sw/host_overlay.exe build/$(NAME)/
-	cp hw/overlay_hw.xclbin build/$(NAME)/
+	mkdir -p $(NAME)
+	cp sw/host_overlay.exe $(NAME)/
+	cp hw/overlay_enc_hw.xclbin $(NAME)/
+	cp hw/overlay_add_hw.xclbin $(NAME)/
+	cp hw/overlay_dec_hw.xclbin $(NAME)/
 build_and_pack:
 	$(info )
 	$(info *********************** Building ***********************)
@@ -59,10 +69,10 @@ build_and_pack:
 	make build_sw
 	make pack
 # Clean objects
-clean: clean_data_movers clean_hw clean_sw
+clean: clean_source clean_hw clean_sw
 
-clean_data_movers:
-	make -C ./data_movers clean
+clean_source:
+	make -C ./source clean
 clean_hw:
 	make -C ./hw clean
 clean_sw:

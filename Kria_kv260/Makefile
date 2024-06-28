@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-BUILD_DIR = build
+BUILD_DIR = hw
 HLS_DIR = $(BUILD_DIR)/CKKS_HLS_PROJ
 VIVADO_DIR = $(BUILD_DIR)/CKKS_VIVADO_PROJ
 SOURCE_DIR = source
@@ -34,7 +34,7 @@ VIVADO_ENC_TCL_FILE = ckks_encryption_kria.tcl
 VIVADO_DEC_TCL_FILE = ckks_decryption_kria.tcl
 
 FILES_TO_PACK = host/data_gen host/data host/encryption_host.ipynb host/decryption_host.ipynb $(VIVADO_DIR)/ckks_decryption_wrapper.xsa $(VIVADO_DIR)/ckks_encryption_wrapper.xsa
-ZIP_NAME = hw_build.zip
+ZIP_NAME = export.zip
 
 
 help:

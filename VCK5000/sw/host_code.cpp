@@ -28,17 +28,16 @@
 #include <string>
 #include "experimental/xrt_kernel.h"
 #include "experimental/xrt_uuid.h"
-#include "../common/common.h"
 #include <random>
 #include <ctime>
 #include <chrono>
 
 
-#include "../data_movers/Structures.cpp"
-#include "../data_movers/ZStructures.cpp"
-#include "../data_movers/Scheme.cpp"
-#include "../data_movers/Utils.cpp"
-#include "../data_movers/writer.cpp"
+#include "../source/Structures.cpp"
+#include "../source/ZStructures.cpp"
+#include "../source/Scheme.cpp"
+#include "../source/Utils.cpp"
+#include "../source/writer.cpp"
 
 // For hw emulation, run in sw directory: source ./setup_emu.sh -s on
 

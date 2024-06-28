@@ -50,19 +50,19 @@ TARGET := hw
 XOCCLFLAGS := --kernel_frequency 200 --platform $(PLATFORM) -t $(TARGET)  -s -g
 
 
-XOS_ENC     := ../data_movers/ckks_plaintext_reader_$(TARGET).xo
-XOS_ENC     += ../data_movers/ckks_encode_$(TARGET).xo
-XOS_ENC     += ../data_movers/ckks_encrypt_$(TARGET).xo
-XOS_ENC     += ../data_movers/ckks_cipher_writer_$(TARGET).xo
+XOS_ENC     := ../source/ckks_plaintext_reader_$(TARGET).xo
+XOS_ENC     += ../source/ckks_encode_$(TARGET).xo
+XOS_ENC     += ../source/ckks_encrypt_$(TARGET).xo
+XOS_ENC     += ../source/ckks_cipher_writer_$(TARGET).xo
 
-XOS_ADD     := ../data_movers/ckks_add_reader_$(TARGET).xo
-XOS_ADD     += ../data_movers/ckks_add_$(TARGET).xo
-XOS_ADD     += ../data_movers/ckks_cipher_writer_$(TARGET).xo
+XOS_ADD     := ../source/ckks_add_reader_$(TARGET).xo
+XOS_ADD     += ../source/ckks_add_$(TARGET).xo
+XOS_ADD     += ../source/ckks_cipher_writer_$(TARGET).xo
 
-XOS_DEC     := ../data_movers/ckks_decryption_reader_$(TARGET).xo
-XOS_DEC     += ../data_movers/ckks_decrypt_$(TARGET).xo
-XOS_DEC     += ../data_movers/ckks_decode_$(TARGET).xo
-XOS_DEC     += ../data_movers/ckks_plaintext_writer_$(TARGET).xo
+XOS_DEC     := ../source/ckks_decryption_reader_$(TARGET).xo
+XOS_DEC     += ../source/ckks_decrypt_$(TARGET).xo
+XOS_DEC     += ../source/ckks_decode_$(TARGET).xo
+XOS_DEC     += ../source/ckks_plaintext_writer_$(TARGET).xo
 
 
 XSA_OBJ_ENC := overlay_enc_$(TARGET).xsa
