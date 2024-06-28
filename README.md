@@ -14,7 +14,7 @@
 ## Boards used:
 AMD Kria KV260, AMD-Xilinx Versal VCK5000
 
-<img src="https://hackster.imgix.net/uploads/attachments/1343310/_aZQq9gdBBd.blob?auto=compress%2Cformat&w=900&h=675&fit=min" height="260" align="bottom" /> <img src="https://www.xilinx.com/content/dam/xilinx/imgs/products/versal/vck5000/vck5000.png" height="260" align="bottom" />
+<img src="https://hackster.imgix.net/uploads/attachments/1343310/_aZQq9gdBBd.blob?auto=compress%2Cformat&w=900&h=675&fit=min" height="260" align="bottom" />              <img src="https://www.xilinx.com/content/dam/xilinx/imgs/products/versal/vck5000/vck5000.png" height="260" align="bottom" />
 
 ## Software Version:
 Vitis HLS 2022.2, Vivado 2022.2, Vitis 2022.2 , PYNQ 3.0.1
@@ -57,14 +57,13 @@ The repository contains the following main directories and files:
 
 #### For Kria KV260:
 3. Navigate to the `Kria_kv260/` directory.
-4. Connect through shell to your Kria KV260 with pynq installed.
-5. Move the folder `ready_to_run/` to the board in `/home/root/jupiter_notebooks/` (this path can vary according to your installation of pynq)
-6. Connect through Jupiter to the board and move in the `ready_to_run/` directory.
-7. Open the host you want to test `<...>_host.ipynb` and run it.
+4. Move the folder `ready_to_run/` to your Kria in `/home/root/jupiter_notebooks/` (this path can vary according to your installation of pynq)
+5. Connect through Jupiter to the board and move in the `ready_to_run/` directory.
+6. Open the host you want to test `<...>_host.ipynb` and run it.
 
 #### For Versal VCK5000:
 
-1. Move the `hw_build/` folder on the host machine connected to board, enter the folder, and run the host application with:
+3. Move the `hw_build/` folder on the host machine connected to board, enter the folder, and run the host application with:
   ```sh
   ./host_overlay.exe
   ```
