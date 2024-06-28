@@ -737,7 +737,6 @@ int main(int argc, char *argv[]) {
     std::cout << "[INFO] 1- CKKS_ENCRYPTION" << std::endl;
     std::cout << "[INFO] 2- CKKS_ADD" << std::endl;
     std::cout << "[INFO] 3- CKKS_DECRYPTION" << std::endl;
-    std::cout << "[INFO] 4- CKKS_SCHEME" << std::endl;
     std::cout << "[INPUT] Please select the kernel to test: ";
 
     int kernel;
