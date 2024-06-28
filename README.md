@@ -32,9 +32,9 @@ The repository contains the following main directories and files:
     └─`DataGen/`            #Includes files required to compile the software version of the algorithm on the Kria KV260 arm cpu. The generated binary is used by the host code to create encryption keys, secret keys, reference values, and measure the time taken to test the hardware version's correctness and speedup.
     └─`hw/`                 #Directory for build outputs.
     └─`host/`               #Host code and all necessary files for testing.
-    └─`hw/`                 #Hardware build files.
+    └─`hw_build/`           #Directory containing the Bitstreams.
     └─`source/`             #Source code implementing the CKKS encryption scheme.
-    └─`ready_to_run/`             #Source code implementing the CKKS encryption scheme.
+    └─`ready_to_run/`       #Directory containing ready-to-run files.
   
 ├─`VCK5000` : Supports the development and deployment of the CKKS scheme on the Versal VCK5000 platform. It includes:
     └─`Makefile`            #Automates the build process for compiling source code and generating binaries and hardware configuration files.
