@@ -245,6 +245,8 @@ void test_ckks_encryption(std::complex<double> messageVec[], int slots, Scheme s
     Ciphertext cipher1 = encrypt(messageVec, slots, scheme.EncKey.ax, scheme.EncKey.bx, context, rnd);
     auto sw_duration = std::chrono::high_resolution_clock::now() - sw_time_start;
     bool error = false;
+    std::cout<<"[INFO] 14. Checking results... ";
+
     
     if(ci_ax_degree_out[0] != cipher1.ax.degree){
         std::cout<<"\n[ERROR] encryption failed in chipher ax degree";
@@ -272,6 +274,7 @@ void test_ckks_encryption(std::complex<double> messageVec[], int slots, Scheme s
         std::cout<<"\n[ERROR] CKKS_ENCRYPTION kernel failed"<<std::endl;
         return;
     }
+    std::cout<<"Done" << std::endl;
 
     std::cout << "[INFO] All tests passed successfully" << std::endl;
 
