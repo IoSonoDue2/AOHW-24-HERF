@@ -4,7 +4,7 @@
 |----------------------|-----|
 | **Team number**          | AOHW-339 |
 | **Project name**         | Homomorphic Encryption Acceleration Through Reconfigurable Fabric |
-| **YouTube's video**      | lollo |
+| **YouTube's video**      | https://youtu.be/GwnpjDBOPcQ |
 | **Project's repository** | https://github.com/IoSonoDue2/AOHW-24-HERF |
 | **University name**      | Politecnico di Milano |
 | **Participant (email**)  | Valentino Guerrini (valentino.guerrini@mail.polimi.it) |
